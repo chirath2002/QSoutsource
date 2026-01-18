@@ -55,6 +55,7 @@ export function HomePage() {
 
   const countries = ['UAE', 'Saudi Arabia', 'Qatar', 'United Kingdom', 'Australia', 'Sri Lanka'];
 
+
   return (
     <div>
       {/* Hero Section */}
@@ -170,7 +171,7 @@ export function HomePage() {
                 key={index}
                 className="bg-gray-50 rounded-lg p-6 text-center hover:bg-[#1e3a8a] hover:text-white transition-colors cursor-pointer"
               >
-                <Globe className="mx-auto mb-3" size={32} />
+                <img src={`/${country.toLowerCase().replace(/\s+/g, '-')}.png`} alt={`${country} flag`} className="mx-auto mb-2 h-15 w-18 object-cover rounded" />
                 <p className="font-semibold">{country}</p>
               </div>
             ))}
